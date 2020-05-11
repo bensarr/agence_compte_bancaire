@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="772.0" styleClass="bgd-dashboard" stylesheets="@../../ressources/css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.administrateur.CProfil">
+   <children>
+      <JFXButton layoutX="497.0" layoutY="160.0" onAction="#handleAjouter" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Ajouter" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtLibelle" focusColor="#0d6f4e" layoutX="225.0" layoutY="149.0" prefHeight="39.0" prefWidth="197.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="91.0" layoutY="161.0" styleClass="label-form" text="Libelle :" />
+      <Label layoutX="65.0" layoutY="14.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Administration Profil">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvProfil" layoutX="139.0" layoutY="260.0" prefHeight="262.0" prefWidth="381.0">
+        <columns>
+          <TableColumn fx:id="tbcId" prefWidth="116.0" text="ID" />
+          <TableColumn fx:id="tbcLibelle" prefWidth="264.0" text="Libelle" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

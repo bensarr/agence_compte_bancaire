@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 mars 2020, 03:48:27
+    Author     : bensa
+*/
+.bgd-dashboard{
+    -fx-background-color: #A9F8DE;
+}
+.bgd-anchor{
+    -fx-background-color:#0D6F4E;
+}
+.btn-logout:hover{
+    -fx-hover-color: #D91B32,transparent;
+}
+.btn-connexion{
+    -fx-border-style: solid;
+    -fx-background-color: #A9F8DE,transparent;
+}
+.btn-annuler{
+    -fx-background-color: #1AB282,transparent;
+    -fx-border-style: solid;
+    border-bottom-color: #0D6F4E;
+}
+
+.logo{
+    -fx-border-color: #A9F8DE;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}
+.form-title{
+    -fx-text-fill: #1AB282;
+    -fx-font-size: 40pt;
+    -fx-font-family: "Elephant";
+    -fx-border-color: #A9F8DE;
+    -fx-background-color:#0D6F4E;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}
+.label-form{
+    -fx-text-fill: #0D6F4E;
+    -fx-font-family: "Elephant";
+    -fx-font-size: 15pt;
+}
+
+/*Start Table View*/
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#0D6F4E 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #0D6F4E;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #000000;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #1AB282;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #1AB282;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0D6F4E;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+/*End Table View*/
+
+/*Start Combo Box*/
+.combo-box .list-cell {
+    -fx-text-fill: black;
+}
+.combo-box-popup .list-view{
+    -fx-background-color: #1AB282;
+}
+
+.combo-box-popup .list-view .list-cell{
+    -fx-text-fill: black;
+    -fx-padding: 4 0 4 5;
+    -fx-background-color: #1AB282;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover{
+    -fx-background-color: #1AB282;
+    -fx-text-fill: black;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover{
+    -fx-background-color: #009999;
+    -fx-text-fill: black;
+}
+
+.combo-box-base{
+    -fx-background-color: #1AB282;
+    -fx-padding: 0;
+}
+/*End Combo Box*/

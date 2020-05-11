@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="974.0" styleClass="bgd-dashboard" stylesheets="@../../ressources/css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.client.CHistorique">
+   <children>
+      <JFXButton layoutX="818.0" layoutY="113.0" onAction="#handleRechercher" prefHeight="37.0" prefWidth="133.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Rechercher" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cbxCompte" focusColor="#0d6f4e" layoutX="706.0" layoutY="120.0" prefHeight="25.0" prefWidth="98.0" promptText="Compte" unFocusColor="#0d6f4e" />
+      <DatePicker fx:id="dateRecherche" layoutX="579.0" layoutY="118.0" prefHeight="27.0" prefWidth="118.0" promptText="Date" />
+      <JFXComboBox fx:id="cbxAgence" focusColor="#0d6f4e" layoutX="44.0" layoutY="120.0" prefHeight="25.0" prefWidth="118.0" promptText="Agence" unFocusColor="#0d6f4e" />
+      <TableView fx:id="tbvTransaction" layoutX="81.0" layoutY="180.0" prefHeight="337.0" prefWidth="806.0">
+         <columns>
+            <TableColumn fx:id="tbcDate" prefWidth="85.0" text="Date" />
+            <TableColumn fx:id="tbcTypeCompte" prefWidth="105.0" text="Type Transaction" />
+            <TableColumn fx:id="tbcCSource" prefWidth="122.0" text="Compte Source " />
+            <TableColumn fx:id="tbcCCible" prefWidth="129.0" text="Compte Cible" />
+            <TableColumn fx:id="tbcMontant" prefWidth="117.0" text="Montant" />
+            <TableColumn fx:id="tbcAgence" prefWidth="122.0" text="Agence" />
+            <TableColumn fx:id="tbcGuichet" prefWidth="96.0" text="Guichet" />
+         </columns>
+      </TableView>
+      <Label layoutX="107.0" layoutY="10.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Administration Transaction">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxGuichet" focusColor="#0d6f4e" layoutX="172.0" layoutY="120.0" prefHeight="25.0" prefWidth="118.0" promptText="Guichet" unFocusColor="#0d6f4e" />
+      <JFXComboBox fx:id="cbxCaissier" focusColor="#0d6f4e" layoutX="298.0" layoutY="120.0" prefHeight="25.0" prefWidth="118.0" promptText="Caissier" unFocusColor="#0d6f4e" />
+      <JFXComboBox fx:id="cbxClient" focusColor="#0d6f4e" layoutX="448.0" layoutY="119.0" prefHeight="25.0" prefWidth="118.0" promptText="Client" unFocusColor="#0d6f4e" />
+      <JFXButton fx:id="btnEtat" layoutX="729.0" layoutY="566.0" onAction="#handleBlocage" prefHeight="37.0" prefWidth="151.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Etat" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblBlocage" layoutX="25.0" layoutY="546.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Bloquage">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxClientBlocage" focusColor="#0d6f4e" layoutX="416.0" layoutY="572.0" prefHeight="25.0" prefWidth="208.0" promptText="Client" unFocusColor="#0d6f4e" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="668.0" prefWidth="1076.0" styleClass="bgd-dashboard" stylesheets="@../../ressources/css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.responsable.CTransaction">
+   <children>
+      <JFXButton fx:id="btnCl" layoutX="70.0" layoutY="99.0" onAction="#handleCharger" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Charger" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtNCompte" focusColor="#0d6f4e" layoutX="25.0" layoutY="127.0" prefHeight="39.0" prefWidth="175.0" promptText="N°Compte du Client" unFocusColor="#0d6f4e">
+         <font>
+            <Font name="Bell MT Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblTitle" layoutX="253.0" layoutY="8.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Transaction: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMontant" focusColor="#0d6f4e" layoutX="532.0" layoutY="127.0" prefHeight="39.0" prefWidth="175.0" promptText="Montant" unFocusColor="#0d6f4e">
+         <font>
+            <Font name="Bell MT Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnDest" layoutX="281.0" layoutY="99.0" onAction="#handleChargerDest" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Charger" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtNCompteBenef" focusColor="#0d6f4e" layoutX="233.0" layoutY="127.0" prefHeight="39.0" prefWidth="175.0" promptText="N°Compte du Bénéficiaire" unFocusColor="#0d6f4e">
+         <font>
+            <Font name="Bell MT Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="2.0" layoutY="80.0" prefHeight="5.0" prefWidth="1080.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <Separator fx:id="vM2" layoutX="208.0" layoutY="83.0" orientation="VERTICAL" prefHeight="584.0" prefWidth="0.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="208.0" AnchorPane.topAnchor="83.0" />
+      <Separator layoutX="432.0" layoutY="84.0" orientation="VERTICAL" prefHeight="588.0" prefWidth="8.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <Separator layoutX="2.0" layoutY="212.0" prefHeight="5.0" prefWidth="432.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <Separator layoutX="2.0" layoutY="84.0" orientation="VERTICAL" prefHeight="590.0" prefWidth="8.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <Label fx:id="lblClient" layoutX="13.0" layoutY="218.0" prefHeight="410.0" prefWidth="195.0" styleClass="label-form" stylesheets="@../../ressources/css/style.css" text="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" />
+      <Label fx:id="lblBenef" layoutX="215.0" layoutY="218.0" prefHeight="410.0" prefWidth="215.0" styleClass="label-form" stylesheets="@../../ressources/css/style.css" text="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" />
+      <JFXButton fx:id="btnAff" layoutX="781.0" layoutY="128.0" onAction="#handleAfficherTransaction" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Afficher" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblTransaction" layoutX="467.0" layoutY="205.0" prefHeight="334.0" prefWidth="506.0" styleClass="label-form" stylesheets="@../../ressources/css/style.css" text="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" />
+      <JFXButton layoutX="846.0" layoutY="547.0" onAction="#handleEnregistrerTransaction" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Enregister" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="670.0" layoutY="547.0" onAction="#handleAnnulerTransaction" prefHeight="35.0" prefWidth="127.0" styleClass="btn-annuler" stylesheets="@../../ressources/css/style.css" text="Annuler" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

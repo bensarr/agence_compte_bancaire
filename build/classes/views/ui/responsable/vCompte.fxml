@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1132.0" styleClass="bgd-dashboard" stylesheets="@../../ressources/css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.responsable.CCompte">
+   <children>
+      <TableView fx:id="tbvCcompte" layoutX="315.0" layoutY="187.0" prefHeight="319.0" prefWidth="829.0">
+         <columns>
+            <TableColumn fx:id="tbcNcompte" maxWidth="74.0" prefWidth="74.0" text="N° Compte" />
+            <TableColumn fx:id="tbcNCI" maxWidth="107.0" prefWidth="77.0" text="N° CNI" />
+            <TableColumn fx:id="tbcNom" maxWidth="107.0" prefWidth="62.0" text="NOM" />
+            <TableColumn fx:id="tbcPrenom" maxWidth="120.0" prefWidth="76.0" text="PRENOM" />
+            <TableColumn fx:id="tbcSolde" maxWidth="154.0" prefWidth="67.0" text="Solde" />
+            <TableColumn fx:id="tbcEtat" maxWidth="107.0" prefWidth="52.0" text="Etat" />
+            <TableColumn fx:id="tbcTypeCompte" maxWidth="124.0" prefWidth="69.0" text="Type" />
+            <TableColumn fx:id="tbcEmail" maxWidth="154.0" prefWidth="72.0" text="Email" />
+            <TableColumn fx:id="tbcTelephone" maxWidth="154.0" prefWidth="77.0" text="Telephone" />
+            <TableColumn fx:id="tbcAgence" maxWidth="154.0" prefWidth="69.0" text="Agence" />
+            <TableColumn fx:id="tbcDateFin" maxWidth="154.0" prefWidth="69.0" text="D.Fin" />
+            <TableColumn fx:id="tbcDateCreat" maxWidth="154.0" prefWidth="69.0" text="D.Création" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtNom" focusColor="#0d6f4e" layoutX="119.0" layoutY="147.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="10.0" layoutY="162.0" styleClass="label-form" text="Nom :" />
+      <Label layoutX="93.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Administration Comptes">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txtCPassword" focusColor="#0d6f4e" layoutX="119.0" layoutY="338.0" prefHeight="25.0" prefWidth="175.0" unFocusColor="#0d6f4e" />
+      <Label layoutX="10.0" layoutY="319.0" styleClass="label-form" text="Confirmer&#10;Password :" />
+      <Label layoutX="10.0" layoutY="285.0" styleClass="label-form" text="Password :" />
+      <JFXPasswordField fx:id="txtPassword" focusColor="#0d6f4e" layoutX="119.0" layoutY="285.0" prefHeight="25.0" prefWidth="175.0" unFocusColor="#0d6f4e" />
+      <Label layoutX="10.0" layoutY="253.0" styleClass="label-form" text="Login :" />
+      <JFXTextField fx:id="txtLogin" focusColor="#0d6f4e" layoutX="119.0" layoutY="234.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPrenom" focusColor="#0d6f4e" layoutX="119.0" layoutY="189.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="10.0" layoutY="204.0" styleClass="label-form" text="Prénom :" />
+      <JFXButton layoutX="870.0" layoutY="135.0" onAction="#handleEnregistrer" prefHeight="37.0" prefWidth="151.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Enregistrer" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="5.0" layoutY="120.0" styleClass="label-form" text="N° CNI :" />
+      <JFXTextField fx:id="txtNNCI" focusColor="#0d6f4e" layoutX="119.0" layoutY="109.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="164.0" layoutY="81.0" onAction="#handleVerifier" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Vérifier" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutY="75.0" prefHeight="5.0" prefWidth="1144.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <Label layoutX="10.0" layoutY="378.0" styleClass="label-form" text="Adresse :" />
+      <JFXTextField fx:id="txtAdresse" focusColor="#0d6f4e" layoutX="119.0" layoutY="363.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" focusColor="#0d6f4e" layoutX="119.0" layoutY="405.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="10.0" layoutY="420.0" styleClass="label-form" text="Email :" />
+      <Label layoutX="-2.0" layoutY="467.0" styleClass="label-form" text="Telephone :" />
+      <JFXTextField fx:id="txtTelephone" focusColor="#0d6f4e" layoutX="119.0" layoutY="447.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="301.0" layoutY="80.0" orientation="VERTICAL" prefHeight="436.0" prefWidth="5.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="301.0" AnchorPane.topAnchor="80.0" />
+      <JFXComboBox fx:id="cbxTypeCompte" layoutX="516.0" layoutY="90.0" prefHeight="25.0" prefWidth="213.0" />
+      <Label layoutX="418.0" layoutY="89.0" styleClass="label-form" text="Compte :" />
+      <JFXTextField fx:id="txtSolde" focusColor="#0d6f4e" layoutX="516.0" layoutY="134.0" prefHeight="39.0" prefWidth="213.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="418.0" layoutY="152.0" styleClass="label-form" text="Solde :" />
+      <DatePicker fx:id="dateFin" layoutX="808.0" layoutY="89.0" prefHeight="27.0" prefWidth="213.0" promptText="Date De Fin Blocage" />
+      <Separator layoutX="-6.0" layoutY="514.0" prefHeight="5.0" prefWidth="1155.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <Label layoutX="334.0" layoutY="552.0" styleClass="label-form" text="N° Compte :" />
+      <JFXComboBox fx:id="cbxNCompteBlocage" layoutX="462.0" layoutY="553.0" prefHeight="25.0" prefWidth="242.0" />
+      <Label layoutX="10.0" layoutY="527.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Bloquage">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnEtat" layoutX="753.0" layoutY="547.0" onAction="#handleBlocage" prefHeight="37.0" prefWidth="151.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Etat" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblError" layoutX="119.0" layoutY="310.0" prefHeight="19.0" prefWidth="175.0" textFill="#d70505">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

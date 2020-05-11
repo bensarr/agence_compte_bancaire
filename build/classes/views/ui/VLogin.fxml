@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="436.0" maxWidth="390.0" minHeight="436.0" minWidth="390.0" prefHeight="436.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CLogin">
+    <stylesheets>
+        <URL value="@/views/ressources/css/style.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="41.0" layoutY="67.0" maxHeight="436.0" maxWidth="390.0" minHeight="436.0" minWidth="390.0" prefHeight="436.0" prefWidth="390.0" styleClass="bgd-anchor" stylesheets="@../ressources/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <ImageView fitHeight="97.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../ressources/images/logo.png" />
+               </image>
+            </ImageView>
+         </top>
+         <center>
+            <Pane prefHeight="340.0" prefWidth="390.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="200.0" layoutX="153.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/images/locked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="56.0" fitWidth="80.0" layoutX="22.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/images/person.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="32.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/images/key.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="txtLogin" focusColor="#a9f8de" layoutX="105.0" layoutY="85.0" prefHeight="25.0" prefWidth="235.0" promptText="Login">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtPassword" focusColor="#a9f8de" layoutX="103.0" layoutY="167.0" prefHeight="25.0" prefWidth="239.0" promptText="Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton layoutX="211.0" layoutY="253.0" onAction="#handleConnexion" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../ressources/css/style.css" text="Connexion" textFill="#0d6f4e">
+                     <font>
+                        <Font name="Elephant" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAnnuler" layoutX="42.0" layoutY="253.0" onAction="#handleAnnuler" prefHeight="35.0" prefWidth="127.0" styleClass="btn-annuler" stylesheets="@../ressources/css/style.css" text="Annuler" textFill="#0d6f4e">
+                     <font>
+                        <Font name="Elephant" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="lblError" layoutX="106.0" layoutY="308.0" textFill="#d70505" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

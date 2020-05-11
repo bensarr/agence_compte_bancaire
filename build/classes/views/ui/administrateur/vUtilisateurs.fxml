@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="879.0" styleClass="bgd-dashboard" stylesheets="@../../ressources/css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.administrateur.CUtilisateurs">
+   <children>
+      <Label layoutX="70.0" layoutY="14.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Administration Utilisateurs">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutY="158.0" styleClass="label-form" text="Nom :" />
+      <JFXTextField fx:id="txtNom" focusColor="#0d6f4e" layoutX="109.0" layoutY="141.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="158.0" layoutY="451.0" onAction="#handleAjouter" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Ajouter" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutY="211.0" styleClass="label-form" text="Prénom :" />
+      <JFXTextField fx:id="txtPrenom" focusColor="#0d6f4e" layoutX="109.0" layoutY="194.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtLogin" focusColor="#0d6f4e" layoutX="109.0" layoutY="248.0" prefHeight="39.0" prefWidth="175.0" unFocusColor="#0d6f4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutY="265.0" styleClass="label-form" text="Login :" />
+      <JFXPasswordField fx:id="txtPassword" focusColor="#0d6f4e" layoutX="109.0" layoutY="311.0" prefHeight="25.0" prefWidth="175.0" unFocusColor="#0d6f4e" />
+      <Label layoutY="308.0" styleClass="label-form" text="Password :" />
+      <Label layoutY="347.0" styleClass="label-form" text="Confirmer&#10;Password :" />
+      <JFXPasswordField fx:id="txtCPassword" focusColor="#0d6f4e" layoutX="109.0" layoutY="364.0" prefHeight="25.0" prefWidth="175.0" unFocusColor="#0d6f4e" />
+      <Label layoutY="415.0" styleClass="label-form" text="Profil :" />
+      <JFXComboBox fx:id="cbxProfil" layoutX="109.0" layoutY="418.0" prefHeight="25.0" prefWidth="175.0" />
+      <JFXComboBox fx:id="cbxAgence" layoutX="109.0" layoutY="115.0" prefHeight="25.0" prefWidth="175.0" promptText="Optionel" />
+      <Label layoutY="112.0" styleClass="label-form" text="Agence :" />
+      <TableView fx:id="tbvUtilistaeur" layoutX="292.0" layoutY="110.0" prefHeight="396.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="tbcId" maxWidth="30.0" prefWidth="24.0" text="ID" />
+          <TableColumn fx:id="tbcNom" maxWidth="107.0" prefWidth="86.0" text="NOM" />
+            <TableColumn fx:id="tbcPrenom" maxWidth="120.0" prefWidth="112.0" text="PRENOM" />
+            <TableColumn fx:id="tbcLogin" maxWidth="107.0" prefWidth="89.0" text="LOGIN" />
+            <TableColumn fx:id="tbcEtat" maxWidth="107.0" prefWidth="77.0" text="ETAT" />
+            <TableColumn fx:id="tbcAgence" maxWidth="124.0" prefWidth="87.0" text="AGENCE" />
+            <TableColumn fx:id="tbcProfil" maxWidth="154.0" prefWidth="67.0" text="PROFIL" />
+        </columns>
+      </TableView>
+      <Separator layoutY="515.0" prefHeight="12.0" prefWidth="998.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="515.0" />
+      <JFXComboBox fx:id="cbxUtilisateur" focusColor="#0d6f4e" layoutY="615.0" prefHeight="25.0" prefWidth="182.0" promptText="Utilisateur " unFocusColor="#0d6f4e" />
+      <JFXButton fx:id="btnEtat" layoutX="200.0" layoutY="609.0" onAction="#handleEtat" prefHeight="27.0" prefWidth="92.0" styleClass="btn-annuler" stylesheets="@../../ressources/css/style.css" text="ETAT" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="298.0" layoutY="527.0" orientation="VERTICAL" prefHeight="164.0" prefWidth="4.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <JFXComboBox fx:id="cbxAgenceAff" focusColor="#0d6f4e" layoutX="334.0" layoutY="615.0" prefHeight="25.0" prefWidth="127.0" promptText="Agence Affectation" unFocusColor="#0d6f4e" />
+      <JFXComboBox fx:id="cbxUtilisateurAff" focusColor="#0d6f4e" layoutX="474.0" layoutY="615.0" prefHeight="25.0" prefWidth="127.0" promptText="Utilisateur Affectation" unFocusColor="#0d6f4e" />
+      <JFXButton layoutX="682.0" layoutY="609.0" onAction="#handleAffecter" prefHeight="37.0" prefWidth="102.0" styleClass="btn-annuler" stylesheets="@../../ressources/css/style.css" text="Affecter" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="421.0" layoutY="527.0" prefHeight="54.0" prefWidth="312.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Affectation">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="527.0" prefHeight="77.0" prefWidth="227.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Blocage">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError" layoutX="109.0" layoutY="338.0" prefHeight="19.0" prefWidth="175.0" textFill="#d70505">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

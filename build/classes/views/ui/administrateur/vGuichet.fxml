@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="687.0" prefWidth="1002.0" styleClass="bgd-dashboard" stylesheets="@../../ressources/css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.administrateur.CGuichet">
+   <children>
+      <Label layoutX="97.0" styleClass="form-title" stylesheets="@../../ressources/css/style.css" text="Administration Guichet">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvGuichet" layoutX="16.0" layoutY="290.0" prefHeight="324.0" prefWidth="806.0">
+        <columns>
+          <TableColumn fx:id="tbcId" prefWidth="26.0" text="ID" />
+          <TableColumn fx:id="tbcGuichet" prefWidth="192.0" text="Guichet" />
+            <TableColumn fx:id="tbcAgence" prefWidth="155.0" text="AGENCE" />
+            <TableColumn fx:id="tbcCaissier" prefWidth="154.0" text="CAISSIER" />
+            <TableColumn fx:id="tbcDebut" prefWidth="142.0" text="DEBUT" />
+            <TableColumn fx:id="tbcFin" prefWidth="136.0" text="FIN" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cbxGuichet" focusColor="#0d6f4e" layoutX="16.0" layoutY="629.0" prefHeight="25.0" prefWidth="119.0" promptText="Guichet" unFocusColor="#0d6f4e" />
+      <JFXButton layoutX="694.0" layoutY="623.0" onAction="#handleAffecter" prefHeight="35.0" prefWidth="127.0" styleClass="btn-annuler" stylesheets="@../../ressources/css/style.css" text="Affecter" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cbxCaissier" focusColor="#0d6f4e" layoutX="149.0" layoutY="629.0" prefHeight="25.0" prefWidth="197.0" promptText="Caissier à Affecter" unFocusColor="#0d6f4e" />
+      <JFXComboBox fx:id="cbxAgenceRecherche" focusColor="#0d6f4e" layoutX="25.0" layoutY="249.0" prefHeight="25.0" prefWidth="151.0" promptText="Agence" unFocusColor="#0d6f4e" />
+      <DatePicker fx:id="dateRecherche" layoutX="230.0" layoutY="248.0" prefHeight="27.0" prefWidth="151.0" promptText="Date Recherchée" />
+      <JFXComboBox fx:id="cbxCaissierRecherche" focusColor="#0d6f4e" layoutX="439.0" layoutY="249.0" prefHeight="25.0" prefWidth="157.0" promptText="Caissier Recherché" unFocusColor="#0d6f4e" />
+      <JFXButton layoutX="651.0" layoutY="243.0" onAction="#handleRechercher" prefHeight="37.0" prefWidth="133.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Rechercher" textFill="#0d6f4e">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutY="141.0" prefHeight="15.0" prefWidth="1002.0" style="-fx-background-color: #1AB282; -fx-border-color: #1AB282;" />
+      <Pane fx:id="panelAdministrateur" layoutX="6.0" layoutY="71.0" prefHeight="77.0" prefWidth="826.0">
+         <children>
+            <Label layoutX="326.0" layoutY="29.0" prefHeight="27.0" prefWidth="82.0" styleClass="label-form" text="Agence :" />
+            <JFXComboBox fx:id="cbxAgence" focusColor="#0d6f4e" layoutX="428.0" layoutY="31.0" prefHeight="25.0" prefWidth="181.0" unFocusColor="#0d6f4e" />
+            <JFXTextField fx:id="txtLibelle" focusColor="#0d6f4e" layoutX="113.0" layoutY="17.0" prefHeight="39.0" prefWidth="181.0" unFocusColor="#0d6f4e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="14.0" layoutY="28.0" prefHeight="27.0" prefWidth="82.0" styleClass="label-form" text="Libelle :" />
+            <JFXButton layoutX="651.0" layoutY="24.0" onAction="#handleAjouter" prefHeight="35.0" prefWidth="127.0" styleClass="btn-connexion" stylesheets="@../../ressources/css/style.css" text="Ajouter" textFill="#0d6f4e">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <DatePicker fx:id="dateDebut" layoutX="360.0" layoutY="628.0" prefHeight="27.0" prefWidth="151.0" promptText="Date De Début" />
+      <DatePicker fx:id="dateFin" layoutX="524.0" layoutY="628.0" prefHeight="27.0" prefWidth="151.0" promptText="Date De Fin" />
+      <Label layoutX="197.0" layoutY="167.0" style="-fx-background-color: #99cc33;" styleClass="label-form" text="Sélectionner une Agence Avant de faire les &#10;Traitements de Recherche ou d'Affectation !!!" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
